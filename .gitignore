@@ -1,0 +1,84 @@
+# General
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+
+# Ignore local system files
+*.DS_Store
+
+# Ignore all byte-compiled Python files
+*.py[cod]
+*$py.class
+
+# Python virtual environment
+venv/
+ENV/
+
+# Jupyter notebook
+.ipynb_checkpoints
+
+# Helm
+**/charts/*.tgz
+**/tmpcharts
+**/charts/*.lock
+
+# Kubernetes
+*.kubeconfig
+
+# Terraform
+*.tfstate
+*.tfstate.*.backup
+*.tfstate.backup
+*.tfvars
+.terraform/
+terraform.rc
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Docker
+*.cer
+*.key
+.docker/
+**/*.dockerfile
+docker-compose*.yml
+*.dockerignore
+**/.env
+
+# Ignore sensitive data and environments
+secrets/
+credentials.json
+
+# Node (if applicable)
+node_modules/
+npm-debug.log
+
+# Log files
+*.log
+*.sql
+*.sqlite
+
+# Windows image file caches
+Thumbs.db
+
+# Mac files
+.DS_Store
+
+# Thumbnails
+._*
+# Icon must end with two \r
+Icon
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
