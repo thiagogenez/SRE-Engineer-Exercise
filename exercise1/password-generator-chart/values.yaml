@@ -51,6 +51,10 @@ ingress:
   #    hosts:
   #      - chart-example.local
 
+podDisruptionBudget:
+  create: true
+  minAvailable: 1
+
 resources:
   limits:
     cpu: "500m"
@@ -69,8 +73,8 @@ readinessProbe:
     port: http
 
 autoscaling:
-  enabled: false
-  minReplicas: 3
+  enabled: true
+  minReplicas: 2
   maxReplicas: 10
   targetCPUUtilizationPercentage: 80
   targetMemoryUtilizationPercentage: 80

@@ -1,0 +1,13 @@
+{{- if .Values.podDisruptionBudget.create -}}
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: {{ include "password-generator-chart.fullname" . }}
+  labels:
+    {{- include "password-generator-chart.labels" . | nindent 4 }}
+spec:
+  minAvailable: {{ .Values.podDisruptionBudget.minAvailable }}
+  selector:
+    matchLabels:
+      {{- include "password-generator-chart.selectorLabels" . | nindent 6 }}
+{{- end -}}
