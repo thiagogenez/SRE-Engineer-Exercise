@@ -17,7 +17,7 @@ def generate_password(length, special_chars, numbers):
 def start():
     hostname = socket.gethostname()
     IPAddr = socket.gethostbyname(hostname)
-    return f"Welcome to Password Generator running on {hostname} with IP address {IPAddr}"
+    return f"Welcome to Password Generator! => running on {hostname} with IP address {IPAddr}"
 
 
 @app.route('/generate-passwords', methods=['POST'])

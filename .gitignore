@@ -82,3 +82,34 @@ Icon
 .Trashes
 .VolumeIcon.icns
 .com.apple.timemachine.donotpresent
+
+# Terraform .terraform directory
+.terraform/
+
+# Local .terraform directories
+**/.terraform/*
+
+# Terraform .tfstate files
+*.tfstate
+*.tfstate.*
+
+# Crash log files
+crash.log
+
+# Exclude all .tfvars files, which usually contain sensitive information
+*.tfvars
+
+# Ignore override files as they're usually used to override resources locally and so
+# are not checked in
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Ignore CLI configuration files
+.terraformrc
+terraform.rc
+
+# Ignore sensitive files containing credentials, such as provider.tf and terraform.tfvars files
+*provider.tf
+*terraform.tfvars
