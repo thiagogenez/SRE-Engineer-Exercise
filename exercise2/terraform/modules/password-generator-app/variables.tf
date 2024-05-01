@@ -8,6 +8,11 @@ variable "app_name" {
   type        = string
 }
 
+variable "repository" {
+  description = "The name of the app's repository."
+  type        = string
+}
+
 variable "namespace" {
   description = "The name of the namespace the app will be deployed."
   type        = string

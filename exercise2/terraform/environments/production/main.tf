@@ -52,4 +52,5 @@ module "password-generator-app" {
 
   app_name  = "my-password-generator-app"
   namespace = "password-generator-app"
+  repository = "654654572219.dkr.ecr.eu-central-1.amazonaws.com/thiagogenez"
 }

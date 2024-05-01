@@ -3,6 +3,11 @@ resource "helm_release" "password-generator-app" {
   chart      = "../../../../exercise1/password-generator-chart"
   namespace        = var.namespace
   create_namespace = true
+
+  set {
+    name  = "image.repository"
+    value = var.repository
+  }
 }
 
 data "kubernetes_service" "load_balancer" {
