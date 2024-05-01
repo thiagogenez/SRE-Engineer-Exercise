@@ -3,6 +3,17 @@ variable "cluster_name" {
   type        = string
 }
 
+variable "app_name" {
+  description = "The name of the app."
+  type        = string
+}
+
+variable "namespace" {
+  description = "The name of the namespace the app will be deployed."
+  type        = string
+  default     = "default"
+}
+
 variable "cluster_endpoint" {
   description = "The endpoint for the EKS cluster."
   type        = string

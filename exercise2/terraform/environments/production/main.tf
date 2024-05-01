@@ -42,11 +42,14 @@ module "cluster-autoscaler" {
 
 
 # 3) Dploy the password-generator-app
-module "password-generator-app"{
+module "password-generator-app" {
   # Reference the Cluster Autoscaler module from the specified source path.
   source = "../../modules/password-generator-app"
 
   cluster_name                       = module.eks.cluster_name
   cluster_endpoint                   = module.eks.cluster_endpoint
   cluster_certificate_authority_data = module.eks.cluster_certificate_authority_data
+
+  app_name  = "my-password-generator-app"
+  namespace = "password-generator-app"
 }
