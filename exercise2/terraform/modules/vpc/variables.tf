@@ -15,7 +15,7 @@ variable "region" {
 
 variable "name" {
   type        = string
-  description = "The name of the cluster created."
+  description = "The name of the cluster to be created."
   validation {
     condition     = length(var.name) > 0
     error_message = "The cluster name must not be empty."

@@ -113,3 +113,7 @@ terraform.rc
 # Ignore sensitive files containing credentials, such as provider.tf and terraform.tfvars files
 *provider.tf
 *terraform.tfvars
+
+.terraform.lock.hcl
+*.tfvars.json
+git
