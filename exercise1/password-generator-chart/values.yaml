@@ -4,6 +4,8 @@
 
 replicaCount: 3
 
+environment: "blue" # blue or green
+
 image:
   repository: password-generator-image
   pullPolicy: IfNotPresent
@@ -73,8 +75,8 @@ readinessProbe:
     port: http
 
 autoscaling:
-  enabled: true
-  minReplicas: 2
+  enabled: false
+  minReplicas: 4
   maxReplicas: 10
   targetCPUUtilizationPercentage: 80
   targetMemoryUtilizationPercentage: 80

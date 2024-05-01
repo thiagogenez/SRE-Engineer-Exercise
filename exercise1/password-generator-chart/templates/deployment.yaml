@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "password-generator-chart.fullname" . }}
+  name: {{ include "password-generator-chart.fullname" . }}-{{ .Values.environment }}
   labels:
     {{- include "password-generator-chart.labels" . | nindent 4 }}
 spec:
@@ -11,6 +11,7 @@ spec:
   selector:
     matchLabels:
       {{- include "password-generator-chart.selectorLabels" . | nindent 6 }}
+      environment: {{ .Values.environment }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -22,6 +23,7 @@ spec:
         {{- with .Values.podLabels }}
         {{- toYaml . | nindent 8 }}
         {{- end }}
+        environment: {{ .Values.environment }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
